@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Question</title>
+</head>
+<body>
+<div class="div">
+    <button class="button">Нажми на меня</button>
+</div>
+<div class="border"></div>
+<div class="div">
+    <label for="input"></label>
+    <input id="input" class="firstInput" type="text" value="Hello, Palmo">
+    <button class="firstInput__button">Заменить</button>
+</div>
+<div class="border"></div>
+<div class="div">
+    <label>
+        <input class="secondInput">
+    </label>
+    <button class="secondInput__button">Вывести</button>
+</div>
+<div class="border"></div>
+<div class="div">
+    <h1 class="firstHeading">Привет, Тимур</h1>
+    <h1 class="secondHeading">Привет, Максим</h1>
+    <button class="swapButton">Поменять местами</button>
+</div>
+<div class="border"></div>
+<div class="div">
+    <p id="text">Какой-то текст</p>
+    <button id="toggleColorButton">Изменить цвет текста</button>
+</div>
+<div class="border"></div>
+<div class="div">
+    <label for="textInput"></label>
+    <input type="text" id="textInput" placeholder="Введите текст здесь...">
+    <button id="toggleButton">Заблокировать инпут</button>
+</div>
+<div class="border"></div>
+<div class="div">
+    <div id="greenSquare" class="square green"></div>
+    <div id="redSquare" class="square red"></div>
+</div>
+<div class="border"></div>
+<div class="div">
+    <button id="addItemButton">Добавить элемент</button>
+    <ul id="itemList"></ul>
+</div>
+<div class="border"></div>
+<div class="div">
+    <label for="textArea"></label>
+    <textarea id="textArea"></textarea>
+    <button id="outputValuesButton">Вывести список</button>
+    <ol id="outputList"></ol>
+</div>
+<div class="border"></div>
+<div class="container">
+    <h4 id="successMessage" style="display:none; color: green">Регистрация пройдена успешно!</h4>
+    <form id="registrationForm" name="registrationForm">
+        <div class="form-group">
+            <label for="username">Логин</label>
+            <input type="text" id="username" name="input">
+            <span class="error">Логин должен быть от 4 до 20 символов и не содержать . _ / \\ | ,</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="input">
+            <span class="error">Введите корректный email</span>
+        </div>
+        <div class="form-group">
+            <label for="age">Возраст</label>
+            <input type="number" id="age" name="input">
+            <span class="error">Возраст должен быть положительным числом</span>
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="input">
+            <span class="error">Пароль должен быть не менее 6 символов, содержать хотя бы одну заглавную букву и одну цифру</span>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Повторите пароль</label>
+            <input type="password" id="confirmPassword" name="input">
+            <span class="error">Пароль не совпадает</span>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+    <div class="border"></div>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button class="btn" id="clear">C</button>
+            <button class="btn" id="clearEntry">CE</button>
+            <button class="btn" id="divide">/</button>
+            <button class="btn" id="multiply">*</button>
+            <button class="btn" id="one">1</button>
+            <button class="btn" id="two">2</button>
+            <button class="btn" id="three">3</button>
+            <button class="btn" id="subtract">-</button>
+            <button class="btn" id="four">4</button>
+            <button class="btn" id="five">5</button>
+            <button class="btn" id="six">6</button>
+            <button class="btn" id="add">+</button>
+            <button class="btn" id="seven">7</button>
+            <button class="btn" id="eight">8</button>
+            <button class="btn" id="nine">9</button>
+            <button class="btn btn-equal" id="equals">=</button>
+            <button class="btn" id="dot">.</button>
+            <button class="btn" id="zero">0</button>
+        </div>
+    </div>
+    <div class="border"></div>
+    <div class="container">
+        <h1>Товары</h1>
+        <div class="products">
+            <div class="product">
+                <span>Товар 1</span>
+                <button onclick="adgdToCart('Товар 1')">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <span>Товар 2</span>
+                <button onclick="addToCart('Товар 2')">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <span>Товар 3</span>
+                <button onclick="addToCart('Товар 3')">Добавить в корзину</button>
+            </div>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">🛒</div>
+    </div>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Корзина</h2>
+            <ul id="cartList"></ul>
+            <button onclick="clearCart()">Очистить корзину</button>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
